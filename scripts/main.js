@@ -38,6 +38,16 @@ $(document).ready(function(){
 /* Выводим результат вычислений в итог ----------------------------------------------------------- */
 			$(".itog-number").text(result);
 		}
+/* Если нажали на С, то удаляем все данные из итога и вычислительного блока ---------------------- */
+		if ( $(event.target).hasClass("btn-C") ) {
+			$(".calc-number").text("");
+			$(".itog-number").text("0");
+		};
+/* Если нажали на Х, то слайсом вырезаем последний элемент --------------------------------------- */
+		if ( $(event.target).hasClass("btn-x") ) {
+			const newCalcNumber = $(".calc-number").text().slice(0, -1);
+			$(".calc-number").text(newCalcNumber);
+		};
 	});
 
 });
