@@ -90,7 +90,8 @@
 	justify-content: center;
 }
 
-.keyboard button {
+.keyboard button,
+.keyboard button.comma {
 	width: 4.2vw;
 	height: 4.2vw;
 	border-radius: 10px;
@@ -101,7 +102,8 @@
 	font-size: 2vw;
 }
 
-.keyboard button:hover {
+.keyboard button:hover,
+.keyboard button.comma:hover {
 	background-color: #25a9b3;
 }
 
@@ -110,11 +112,11 @@
 	height: 9.5vw;
 }
 
-.keyboard button.figure {
+.keyboard button.figure{
 	background-color: #282840;
 	color: #13dfed;
 }
 
-.keyboard button.figure:hover {
+.keyboard button.figure:hover{
 	background-color: #33335c;
 }

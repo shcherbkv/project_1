@@ -10,7 +10,7 @@ $(document).ready(function(){
 	$(".keyboard").on("click", function(event) {
 
 /* Если нажали на цифру или оператор, то выводим их значение на экран ---------------------------- */
-		if ( $(event.target).hasClass("figure") || $(event.target).hasClass("operator") ) {
+		if ( $(event.target).hasClass("figure") || $(event.target).hasClass("operator") || $(event.target).hasClass("comma") ) {
 			$(".calc-number").append(event.target.value);
 		};
 /* Если нажали на оператор, то сохраняем значение оператора и первого операнда ------------------- */
@@ -25,7 +25,7 @@ $(document).ready(function(){
 			const unnecessary = operand1.length + 1;
 			operand2 = $(".calc-number").text().slice(unnecessary);
 			console.log(operand2);
-/* */
+/* В зависимости от оператора производим и сохраняем вычисление ---------------------------------- */
 			if (operator1 === "+") {
 				result = Number(operand1) + Number(operand2);
 			} else if (operator1 === "-") {
@@ -35,7 +35,7 @@ $(document).ready(function(){
 			} else if (operator1 === "/") {
 				result = Number(operand1) / Number(operand2);
 			}
-/* */
+/* Выводим результат вычислений в итог ----------------------------------------------------------- */
 			$(".itog-number").text(result);
 		}
 	});
