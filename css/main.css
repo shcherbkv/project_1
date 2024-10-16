@@ -120,3 +120,10 @@
 .keyboard button.figure:hover{
 	background-color: #33335c;
 }
+
+.btn-x {
+	background-image: url(../pic/button_x.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #13dfed;
+}
